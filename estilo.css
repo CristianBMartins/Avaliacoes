@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+/* Reseta configuração padrão
+----------------------------- */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Define configuração padrão 
+-------------------------- */
+body {
+	background: url("imagens/bg-pattern-top-desktop.svg") no-repeat,
+				url("imagens/bg-pattern-bottom-desktop.svg") no-repeat;
+	font-size: 15px; 
+	font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Define var
+-------------------------- */
+:root {
+  --rx: hsl(300, 43%, 22%);
+  --rs: hsl(333, 80%, 67%);
+  --rxclr: hsl(303, 10%, 53%);
+  --rsfrc: hsl(300, 24%, 96%);
+  --brc: hsl(0, 0%, 100%);
+}
+
+/* ---- Espaçamento e posicionamento ---- */
+div#container {
+	margin: 0 auto;
+	width: 980px;
+}
+
+section#products, section#comments {
+	height: 300px;
+	margin: 1% 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+article.div-top {
+	width: 40%;
+}
+
+/* ---- /Fim espaçamento e posicionamento ---- */
+
+/* ---- Estilização primeira section ---- */
+article#intro h1{
+	font-size: 39px;
+	font-weight: 900;
+	letter-spacing: 1px;
+	color: var(--rx);
+}
+
+article#intro p {
+	font-size: 16px;
+	color: var(--rxclr); 
+}
+
+article#star{
+	display: flex;
+	flex-direction: column;
+	flex-basis: content;
+	max-width: 50%;
+	grid-gap: 10px 0px;
+	flex-grow: 1;
+}
+
+article#star div.stars{
+	background: var(--rsfrc);
+	color: var(--rx);
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 50px;
+	grid-gap: 0px 30px;
+	border-radius: 10px;
+	padding: 0 15px;
+	display: flex;
+	justify-content: space-around;
+	align-self: center;
+}
+
+article#star div.stars:first-child {
+	align-self: flex-start;
+}
+
+article#star div.stars:last-child {
+	align-self: flex-end;
+}
+/* ---- /Fim estilização primeira section ---- */
+
+/* ---- Estilização segunda section ---- */
+section#comments {
+	height: 290px;
+}
+
+section#comments article.div-bottom {
+	background: var(--rx);
+	border-radius: 10px;
+	width: 310px;
+	padding: 30px;
+}
+
+section#comments article.div-bottom img {
+	border-radius: 100%;
+	width: 40px;
+	margin: 0px 20px 20px 0px;
+	float: left;
+}
+
+section#comments article.div-bottom > h4, article.div-bottom > p {
+	color: var(--rsfrc);
+}
+
+article.div-bottom > span.verified {
+	display: block;
+	margin-bottom: 20px;
+	color: #b75ba2;
+}
+
+article.div-bottom > p {
+	font-size: 16px;
+}
+
+section#comments article#area-1 {
+	align-self: start;
+}
+
+section#comments article#area-2 {
+	align-self: center;
+}
+
+section#comments article#area-3 {
+	align-self: end;
+}
+
+/* ---- /Fim estilização segunda section ---- */
+
+
+
+/* @Media 
+------------------ */
+@media screen and (min-width: 375px) and (max-width: 978px) {
+/* Estilização dos @media 
+------------------ */
+
+body {
+	background: url("imagens/bg-pattern-top-mobile.svg") no-repeat,
+				url("imagens/bg-pattern-bottom-mobile.svg") no-repeat bottom right;
+	}
+
+/* ----- Reajuste espaçamento e posicionamento ----- */
+div#container {
+	width: 760px;
+}
+
+section#products, section#comments {
+		flex-direction: column;
+}
+/* ----- /Fim reajuste espaçamento e posicionamento ----- */
+
+
+/* ---- Estilização primeira section ---- */
+article#intro h1{
+	font-size: 25px;
+	text-align: center;
+	margin-top: 30px;
+}
+
+article#intro p {
+	font-size: 14px;
+	text-align: center;
+	margin: 15px 0px 30px 0px;
+}
+
+article#star div.stars{
+	font-size: 12px;
+	line-height: 20px;
+	width: 100%;
+	padding: 10px 0px;
+	flex-direction: column;
+	align-items: center;
+	grid-gap: 0px;
+}
+
+article#star div.stars:first-child,
+article#star div.stars:last-child {
+	align-self: center;
+}
+/* ---- /Fim estilização primeira section ---- */
+
+
+/* ---- Estilização 'comments' segunda section ---- */
+section#products, section#comments {
+	height: auto;
+	margin-top: 20px;
+}
+
+section#comments {
+	grid-gap: 20px 0px;
+}
+
+section#comments .div-bottom > p{
+	font-size: 14px;
+}
+
+section#comments article#area-1,
+section#comments article#area-2,
+section#comments article#area-3 {
+	align-self: center;
+}
+/* ---- /Fim estilização 'comments' segunda section ---- */
+
+}
